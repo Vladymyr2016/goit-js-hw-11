@@ -11,7 +11,7 @@ function onInput(e) {
 
   obj[name] = value;
 
-  localStorage.setItem(STOREGE_KEY, JSON.stringify(obj));
+  localStorage.setItem(STOREGE_KEY, JSON.stringify(obj)).trim();
 }
 
 function onSubmit(e) {
