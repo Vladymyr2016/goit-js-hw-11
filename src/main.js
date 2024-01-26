@@ -76,13 +76,3 @@ function markUp(arr) {
     )
     .join('');
 }
-
-// const markUp = data
-//   .map(country => {
-//     return `<li>
-//         <p>${country.name.common}</p>
-//         <img src="${country.flags.png}" alt="${country.flags.alt}">
-//         </li>`;
-//   })
-//   .join('');
-// ulElem.innerHTML = markUp;

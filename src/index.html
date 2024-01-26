@@ -2,19 +2,26 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-js-hw-09</title>
+    <title>Document</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <ul>
-      <li>
-        <a href="./1-gallery.html">gallery</a>
-      </li>
-      <li>
-        <a href="./2-form.html">form</a>
-      </li>
-    </ul>
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        <input
+          type="text"
+          name="search"
+          autofocus
+          placeholder="search images"
+        />
+      </label>
+
+      <button type="submit">search</button>
+    </form>
+    <span class="loader is-hidden"></span>
+    <ul class="gallery"></ul>
+
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
