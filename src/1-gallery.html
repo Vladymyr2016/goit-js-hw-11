@@ -7,7 +7,21 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        <input
+          type="text"
+          name="search"
+          autofocus
+          placeholder="search images"
+        />
+      </label>
+
+      <button type="submit">search</button>
+    </form>
+    <span class="loader is-hidden"></span>
     <ul class="gallery"></ul>
+
     <script type="module" src="./js/1-gallery.js"></script>
   </body>
 </html>
