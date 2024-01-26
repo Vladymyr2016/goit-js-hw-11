@@ -61,7 +61,7 @@ function markUp(arr) {
   return arr
     .map(
       ({ webformatURL, largeImageURL, tags, comments, likes, downloads }) => {
-        return `<li> 
+        return `<li class="image"> 
      <a href='${largeImageURL}'><img src="${webformatURL}" alt="" /></a>
       <h2>comments</h2>
       <p>${comments}</p>

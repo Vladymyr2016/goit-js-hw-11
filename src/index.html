@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
+    <div class="forminp">
     <form class="feedback-form" autocomplete="off">
-      <label>
+      <label class="label">
         <input
           type="text"
           name="search"
@@ -16,8 +17,10 @@
           placeholder="search images"
         />
       </label>
+      <button class="btn" type="submit">search</button>
+      </div>
 
-      <button type="submit">search</button>
+      
     </form>
     <span class="loader is-hidden"></span>
     <ul class="gallery"></ul>
