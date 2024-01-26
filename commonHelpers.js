@@ -1,13 +1,12 @@
-import"./assets/modulepreload-polyfill-ec808ebb.js";/* empty css                      */import{S as a}from"./assets/vendor-3b6544c1.js";const i=[{preview:"https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820__480.jpg",original:"https://cdn.pixabay.com/photo/2019/05/14/16/43/rchids-4202820_1280.jpg",description:"Hokkaido Flower"},{preview:"https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/14/22/05/container-4203677_1280.jpg",description:"Container Haulage Freight"},{preview:"https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/16/09/47/beach-4206785_1280.jpg",description:"Aerial Beach View"},{preview:"https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619__340.jpg",original:"https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg",description:"Flower Blooms"},{preview:"https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg",original:"https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg",description:"Alpine Mountains"},{preview:"https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/16/23/04/landscape-4208571_1280.jpg",description:"Mountain Lake Sailing"},{preview:"https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/17/09/27/the-alps-4209272_1280.jpg",description:"Alpine Spring Meadows"},{preview:"https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/16/21/10/landscape-4208255_1280.jpg",description:"Nature Landscape"},{preview:"https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843__340.jpg",original:"https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",description:"Lighthouse Coast Sea"}],e=document.querySelector(".gallery"),n=i.map(({preview:p,original:o,description:t})=>` <li class="gallery-item">
-  <a class="gallery-link" href="${o}">
-    <img
-      class="gallery-image"
-      src="${p}"
-      data-source="${o}"
-      alt="${t}"
-    />
-      </a>
-      
-</li>
-  `),c=n.join("");e.innerHTML=c;new a(".gallery a",{captionDelay:250,captions:!0,captionsData:"alt",captionPosition:"bottom"});
+import{S as l,i as u}from"./assets/vendor-9310f15c.js";(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const e of document.querySelectorAll('link[rel="modulepreload"]'))i(e);new MutationObserver(e=>{for(const t of e)if(t.type==="childList")for(const s of t.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&i(s)}).observe(document,{childList:!0,subtree:!0});function o(e){const t={};return e.integrity&&(t.integrity=e.integrity),e.referrerpolicy&&(t.referrerPolicy=e.referrerpolicy),e.crossorigin==="use-credentials"?t.credentials="include":e.crossorigin==="anonymous"?t.credentials="omit":t.credentials="same-origin",t}function i(e){if(e.ep)return;e.ep=!0;const t=o(e);fetch(e.href,t)}})();const f=document.querySelector(".feedback-form"),a=document.querySelector(".gallery"),c=document.querySelector(".loader"),d=new l(".gallery a",{captionDelay:250,captions:!0,captionsData:"alt",captionPosition:"bottom"});function m(n){const r="42040031-47a3b216d4f97a43df3da958a",e=`https://pixabay.com/api/?${new URLSearchParams({key:r,q:n,image_type:"photo",orientation:"horizontal",safesearch:!0})}`;return fetch(e).then(t=>{if(!t.ok)throw new Error(t.status);return t.json()})}f.addEventListener("submit",h);function h(n){n.preventDefault(),c.classList.remove("is-hidden"),a.innerHTML="";const r=n.currentTarget.elements.search.value.trim();m(r).then(o=>{o.hits.length===0&&u.error({position:"center",title:"Error",message:"Sorry, there are no images matching your search query. Please try again!"}),a.innerHTML=p(o.hits),d.refresh()}).catch(o=>console.log(o)).finally(()=>{c.classList.add("is-hidden")})}function p(n){return n.map(({webformatURL:r,largeImageURL:o,tags:i,comments:e,likes:t,downloads:s})=>`<li> 
+     <a href='${o}'><img src="${r}" alt="" /></a>
+      <h2>comments</h2>
+      <p>${e}</p>
+      <h2>tags</h2>
+      <p>${i}</p>
+            <h2>comments</h2>
+      <p>${t}</p>
+      <h2>downloads</h2>
+      <p>${s}</p>
+      </li>`).join("")}
 //# sourceMappingURL=commonHelpers.js.map

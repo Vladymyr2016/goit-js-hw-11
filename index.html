@@ -2,20 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-09/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>goit-js-hw-09</title>
+    <title>Document</title>
     
-    <link rel="stylesheet" href="/goit-js-hw-09/assets/styles-0118a238.css">
+    <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-9310f15c.js">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-fd638ea2.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-ecd00089.css">
   </head>
   <body>
-    <ul>
-      <li>
-        <a href="./1-gallery.html">gallery</a>
-      </li>
-      <li>
-        <a href="./2-form.html">form</a>
-      </li>
-    </ul>
+    <form class="feedback-form" autocomplete="off">
+      <label>
+        <input
+          type="text"
+          name="search"
+          autofocus
+          placeholder="search images"
+        />
+      </label>
+
+      <button type="submit">search</button>
+    </form>
+    <span class="loader is-hidden"></span>
+    <ul class="gallery"></ul>
+
+    
   </body>
 </html>
