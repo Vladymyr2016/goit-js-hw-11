@@ -8,11 +8,12 @@
     <script type="module" crossorigin src="/goit-js-hw-11/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-9310f15c.js">
     <link rel="stylesheet" href="/goit-js-hw-11/assets/vendor-fd638ea2.css">
-    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-ecd00089.css">
+    <link rel="stylesheet" href="/goit-js-hw-11/assets/index-f82f79d9.css">
   </head>
   <body>
+    <div class="forminp">
     <form class="feedback-form" autocomplete="off">
-      <label>
+      <label class="label">
         <input
           type="text"
           name="search"
@@ -20,8 +21,10 @@
           placeholder="search images"
         />
       </label>
+      <button class="btn" type="submit">search</button>
+      </div>
 
-      <button type="submit">search</button>
+      
     </form>
     <span class="loader is-hidden"></span>
     <ul class="gallery"></ul>
