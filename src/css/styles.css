@@ -61,15 +61,20 @@ button {
   gap: 10px;
 }
 
-.image {
+.item {
   width: 360px;
-  height: 200px;
+  height: 250px;
   flex-shrink: 0;
 }
 
+.image {
+  width: 360px;
+  height: 200px;
+
+}
+
 .forminp {
-  display: flex;
-  align-items: center;
+  margin: auto;
 }
 
 .feedback-form {
@@ -83,6 +88,8 @@ button {
   color: #212529;
   background-color: #fff;
   margin-right: 10px;
+  display: flex;
+  align-items: center;
 }
 
 .label {
@@ -100,4 +107,20 @@ button {
   /* 150% */
   letter-spacing: 0.64px;
 
+}
+
+.box-text {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.main-text {
+  font-size: 16px;
+  align-items: center;
+}
+
+.text {
+  font-size: 10px;
+  text-align: center;
 }

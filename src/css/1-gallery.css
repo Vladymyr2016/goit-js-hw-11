@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap: wrap;
     width: 1440px;
-    padding: 24px 156px;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
